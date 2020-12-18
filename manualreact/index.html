@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba React Manual</title>
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <script type="text/babel">
+        class Coba extends React.Component{
+            render(){
+                return <h1>Hello World React</h1>
+            }
+        }
+
+        ReactDOM.render(<Coba/>,document.getElementById("app"));
+        </script>
+    </div>
+
+    <br>
+
+    <div id="apo">
+        <script type="text/babel">
+        class Btn extends React.Component{
+            render(){
+                let element = React.createElement('h1',{}, 'Ini gapake JSX');
+                return element;
+            }
+        }
+
+        class Btn2 extends React.Component{
+            render(){
+                let element = <h1>Ini pake JSX</h1>;
+                return element;
+            }
+        }
+
+        ReactDOM.render(<Btn2/>,document.getElementById("apo"));
+        </script>
+    </div>
+
+    <div id="like_button_container">
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="like_button.js"></script>
+    </div>
+    
+</body>
+</html>
